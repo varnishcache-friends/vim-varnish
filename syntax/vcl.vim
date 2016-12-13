@@ -1,7 +1,7 @@
 " vim syntax file
 " Language:	Varnish Configuration Language
 " Maintainer:	Federico G. Schwindt <fgsch@lodoss.net>
-" Last Change:	2016 Jul 04
+" Last Change:	2016 Dec 13
 if version < 600
   syntax clear
 elseif exists("b:current_syntax")
