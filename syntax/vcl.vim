@@ -22,7 +22,7 @@ syn keyword vclKeyword		include
 syn keyword vclKeyword		ban call error hash_data new contained
 syn keyword vclKeyword		regsub regsuball return rollback contained
 syn keyword vclKeyword		set synthetic unset contained
-syn keyword vclKeywordTop	acl backend import probe sub
+syn keyword vclKeywordTop	vcl acl backend import probe sub
 syn keyword vclReturn		abandon deliver fail fetch hash contained
 syn keyword vclReturn		hit_for_pass lookup miss ok pass contained
 syn keyword vclReturn		pipe purge restart retry synth contained
