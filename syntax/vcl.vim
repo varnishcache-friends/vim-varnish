@@ -1,7 +1,7 @@
 " vim syntax file
 " Language:	Varnish Configuration Language
 " Maintainer:	Federico G. Schwindt <fgsch@lodoss.net>
-" Last Change:	2017 Aug 21
+" Last Change:	2017 Oct 06
 if version < 600
   syntax clear
 elseif exists("b:current_syntax")
@@ -22,7 +22,7 @@ syn keyword vclKeyword		include
 syn keyword vclKeyword		ban call error hash_data new contained
 syn keyword vclKeyword		regsub regsuball return rollback contained
 syn keyword vclKeyword		set synthetic unset contained
-syn keyword vclKeywordTop	vcl acl backend import probe sub
+syn keyword vclKeywordTop	acl backend import probe sub vcl
 syn keyword vclReturn		abandon deliver fail fetch hash contained
 syn keyword vclReturn		hit_for_pass lookup miss ok pass contained
 syn keyword vclReturn		pipe purge restart retry synth contained
