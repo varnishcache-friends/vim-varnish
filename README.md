@@ -1,6 +1,6 @@
 # vim-varnish
 
-Vim syntax support for Varnish Configuration Language (VCL)
+Vim and Neovim syntax support for Varnish Configuration Language (VCL)
 
 ## Installation
 
