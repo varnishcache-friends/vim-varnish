@@ -1,7 +1,7 @@
 " vim syntax file
 " Language:	Varnish Configuration Language
 " Maintainer:	Federico G. Schwindt <fgsch@lodoss.net>
-" Last Change:	2019 Apr  2
+" Last Change:	2019 Jun 28
 if version < 600
   syntax clear
 elseif exists("b:current_syntax")
@@ -34,7 +34,7 @@ syn match   vclVariable		"\v<(resp\.body|resp\.do_esi|resp\.filters|resp\.http\.
 syn match   vclVariable		"\v<(bereq\.backend|bereq\.between_bytes_timeout|bereq\.body|bereq\.connect_timeout|bereq\.first_byte_timeout|bereq\.hash|bereq\.http\.[a-zA-Z0-9_-]+|bereq\.is_bgfetch|bereq\.method|bereq\.proto|bereq\.retries|bereq\.uncacheable|bereq\.url|bereq\.xid|bereq)" contained
 syn match   vclVariable		"\v<(beresp\.age|beresp\.backend\.ip|beresp\.backend\.name|beresp\.backend\.port|beresp\.backend|beresp\.body|beresp\.do_esi|beresp\.do_gunzip|beresp\.do_gzip|beresp\.do_stream|beresp\.filters|beresp\.grace|beresp\.http\.[a-zA-Z0-9_-]+|beresp\.keep|beresp\.proto|beresp\.reason|beresp\.stainmode|beresp\.status|beresp\.storage|beresp\.storage_hint|beresp\.ttl|beresp\.uncacheable|beresp\.was_304|beresp)>" contained
 syn match   vclVariable		"\v<(obj\.age|obj\.grace|obj\.hits|obj\.http\.[a-zA-Z0-9_-]+|obj\.keep|obj\.lastuse|obj\.proto|obj\.reason|obj\.response|obj\.status|obj\.storage|obj\.ttl|obj\.uncacheable|obj)>" contained
-syn match   vclVariable		"\v<(sess.xid)>" contained
+syn match   vclVariable		"\v<(sess\.timeout_idle|sess\.xid)>" contained
 syn match   vclVariable		"\v<(storage\.[a-zA-Z0-9_-]+\.(free_space|happy|used_space)|storage\.[a-zA-Z0-9_-]+)>" contained
 
 hi def link vclConstant		Constant
