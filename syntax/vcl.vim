@@ -11,13 +11,13 @@ endif
 syn include syntax/html.vim
 
 syn region  vclBlock		start="{" end="}"
-	\ transparent contains=ALLBUT,vclKeywordTop
+	\ transparent contains=ALLBUT,vclKeywordTop fold
 syn match   vclComment		"#.*$"
 syn match   vclComment		"//.*$"
-syn region  vclComment		start="/\*" end="\*/"
+syn region  vclComment		start="/\*" end="\*/" fold
 syn keyword vclConditional	elif else elseif elsif if contained
 syn keyword vclConstant		true false now contained
-syn region  vclInlineC		start="C{" end="}C"
+syn region  vclInlineC		start="C{" end="}C" fold
 syn keyword vclKeyword		include
 syn keyword vclKeyword		ban call error hash_data new contained
 syn keyword vclKeyword		regsub regsuball return rollback contained
@@ -47,5 +47,7 @@ hi def link vclVariable		Type
 hi def link vclConditional      Conditional
 
 let b:current_syntax = "vcl"
+
+setlocal foldmethod=syntax
 
 " vim:ts=8
