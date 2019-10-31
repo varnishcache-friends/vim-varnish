@@ -47,6 +47,7 @@ hi def link vclVariable		Type
 hi def link vclConditional      Conditional
 
 let b:current_syntax = "vcl"
-let b:foldmethod=syntax
+
+setlocal foldmethod=syntax
 
 " vim:ts=8
