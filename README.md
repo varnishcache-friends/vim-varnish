@@ -18,7 +18,7 @@ Language (VCL).
 
 ### Folding
 
-Setting `g:vcl\_fold` enables folding VCL via the syntax engine.
+Setting `g:vcl_fold` enables folding VCL via the syntax engine.
 Any block, comment, or inline-C that extends over more than one
 line can be folded using the standard Vim and Neovim fold-commands.
 
