@@ -5,14 +5,14 @@ Language (VCL).
 
 ## Installation
 
+### Using Pathogen
+
+* `git clone --depth=1 https://github.com/fgsch/vim-varnish ~/.vim/bundle/vim-varnish`
+
 ### Using vim-plug
 
 * Add `Plug 'fgsch/vim-varnish'` to `~/.vimrc`
 * `:PlugInstall` or `$ vim +PlugInstall +qall`
-
-### Using Pathogen
-
-* `git clone --depth=1 https://github.com/fgsch/vim-varnish ~/.vim/bundle/vim-varnish`
 
 ## Features
 
