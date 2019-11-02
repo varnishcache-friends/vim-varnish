@@ -1,7 +1,7 @@
 " vim syntax file
 " Language:	Varnish Configuration Language
 " Maintainer:	Federico G. Schwindt <fgsch@lodoss.net>
-" Last Change:	2019 Nov  1
+" Last Change:	2019 Nov  2
 if version < 600
   syntax clear
 elseif exists("b:current_syntax")
@@ -48,6 +48,8 @@ hi def link vclConditional      Conditional
 
 let b:current_syntax = "vcl"
 
-setlocal foldmethod=syntax
+if has("folding") && exists("g:vcl_fold") && g:vcl_fold > 0
+  setlocal foldmethod=syntax
+endif
 
 " vim:ts=8
