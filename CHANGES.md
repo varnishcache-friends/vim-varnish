@@ -1,3 +1,7 @@
+## 0.1.2 - 2019-11-02
+
+* Control folding with g:vcl\_fold.
+
 ## 0.1.1 - 2019-11-01
 
 * Make syntax regions foldable (#7).
