@@ -1,3 +1,8 @@
+## 0.1.3 - 2020-05-23
+
+* Add obj.can\_esi, sess.idle\_send\_timeout, sess.send\_timeout
+  and sess.timeout\_linger.
+
 ## 0.1.2 - 2019-11-02
 
 * Control folding with g:vcl\_fold.
