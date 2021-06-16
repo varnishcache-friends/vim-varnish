@@ -1,3 +1,7 @@
+## 0.1.4 - 2021-06-16
+
+* Add bereq.is\_hitmiss, bereq.is\_hitpass and req.hash\_ignore\_vary.
+
 ## 0.1.3 - 2020-05-23
 
 * Add obj.can\_esi, sess.idle\_send\_timeout, sess.send\_timeout
