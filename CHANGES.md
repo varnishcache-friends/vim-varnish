@@ -1,3 +1,7 @@
+## Unreleased
+
+* Add {req,req\_top,resp,bereq,beresp,obj}.time.
+
 ## 0.1.4 - 2021-06-16
 
 * Add bereq.is\_hitmiss, bereq.is\_hitpass and req.hash\_ignore\_vary.
