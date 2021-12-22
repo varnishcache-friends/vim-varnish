@@ -1,6 +1,7 @@
-## Unreleased
+## 0.1.5 - 2021-12-22
 
 * Add {req,req\_top,resp,bereq,beresp,obj}.time.
+* Add req.transport.
 
 ## 0.1.4 - 2021-06-16
 
