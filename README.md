@@ -5,11 +5,15 @@ Language (VCL).
 
 ## Installation
 
-### Using Pathogen
+### packer
+
+* `use 'varnishcache-friends/vim-varnish'`
+
+### Pathogen
 
 * `git clone --depth=1 https://github.com/fgsch/vim-varnish ~/.vim/bundle/vim-varnish`
 
-### Using vim-plug
+### vim-plug
 
 * Add `Plug 'fgsch/vim-varnish'` to `~/.vimrc`
 * `:PlugInstall` or `$ vim +PlugInstall +qall`
