@@ -1,3 +1,7 @@
+## Unreleased
+
+* Add beresp.transit\_buffer.
+
 ## 0.1.5 - 2021-12-22
 
 * Add {req,req\_top,resp,bereq,beresp,obj}.time.
@@ -23,9 +27,6 @@
 ## 0.1.0 - 2019-06-28
 
 * Add sess.timeout\_idle
-
-## Unreleased
-
 * Add all recent variables. Covers varnish 6.2.0.
 * Add all recent variables. This should cover everything up to
   Varnish 6.1.0.
