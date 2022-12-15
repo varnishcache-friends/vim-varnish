@@ -48,7 +48,7 @@ hi def link vclKeywordTop	Statement
 hi def link vclString		Constant
 hi def link vclReturn		Identifier
 hi def link vclVariable		Type
-hi def link vclConditional      Conditional
+hi def link vclConditional	Conditional
 
 let b:current_syntax = "vcl"
 
