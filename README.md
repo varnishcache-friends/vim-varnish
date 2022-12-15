@@ -11,11 +11,11 @@ Language (VCL).
 
 ### Pathogen
 
-* `git clone --depth=1 https://github.com/fgsch/vim-varnish ~/.vim/bundle/vim-varnish`
+* `git clone --depth=1 https://github.com/varnishcache-friends/vim-varnish ~/.vim/bundle/vim-varnish`
 
 ### vim-plug
 
-* Add `Plug 'fgsch/vim-varnish'` to `~/.vimrc`
+* Add `Plug 'varnishcache-friends/vim-varnish'` to `~/.vimrc`
 * `:PlugInstall` or `$ vim +PlugInstall +qall`
 
 ## Features
