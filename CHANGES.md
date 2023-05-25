@@ -1,5 +1,7 @@
 ## Unreleased
 
+* Fix typo in beresp.saintmode.
+* Add {bereq,req}.trace.
 * Add beresp.transit\_buffer.
 
 ## 0.1.5 - 2021-12-22
