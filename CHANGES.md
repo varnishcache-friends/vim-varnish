@@ -1,4 +1,4 @@
-## Unreleased
+## 0.1.6 - 2023-05-25
 
 * Fix typo in beresp.saintmode.
 * Add {bereq,req}.trace.
