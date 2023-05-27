@@ -8,6 +8,7 @@ elseif exists("b:current_syntax")
   finish
 endif
 
+syn include @C syntax/c.vim
 syn include syntax/html.vim
 
 syn region  vclBlock		start="{" end="}"
@@ -17,7 +18,7 @@ syn match   vclComment		"//.*$"
 syn region  vclComment		start="/\*" end="\*/" fold
 syn keyword vclConditional	elif else elseif elsif if contained
 syn keyword vclConstant		true false now contained
-syn region  vclInlineC		start="C{" end="}C" fold
+syn region  vclInlineC		start="C{" end="}C" contains=@C keepend fold
 syn keyword vclKeyword		include
 syn keyword vclKeyword		ban call error hash_data new contained
 syn keyword vclKeyword		regsub regsuball return rollback contained
