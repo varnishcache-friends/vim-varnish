@@ -46,7 +46,7 @@ hi def link vclConstant		Constant
 hi def link vclComment		Comment
 hi def link vclKeyword		Statement
 hi def link vclKeywordTop	Statement
-hi def link vclString		Constant
+hi def link vclString		String
 hi def link vclReturn		Identifier
 hi def link vclVariable		Type
 hi def link vclConditional	Conditional
