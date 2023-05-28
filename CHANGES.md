@@ -1,3 +1,9 @@
+## Unreleased
+
+* Highlight C code inside C{..}C.
+* Highlight long strings in the rhs.
+* Change string Highlighting.
+
 ## 0.1.6 - 2023-05-25
 
 * Fix typo in beresp.saintmode.
