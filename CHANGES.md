@@ -1,4 +1,4 @@
-## Unreleased
+## 0.1.7 - 2024-02-11
 
 * Highlight C code inside C{..}C.
 * Highlight long strings in the rhs.
