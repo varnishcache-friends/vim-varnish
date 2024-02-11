@@ -1,7 +1,7 @@
 " vim syntax file
 " Language:	Varnish Configuration Language
 " Maintainer:	Federico G. Schwindt <fgsch@lodoss.net>
-" Last Change:	2023 May 25
+" Last Change:	2024 Feb 11
 if version < 600
   syntax clear
 elseif exists("b:current_syntax")
@@ -31,7 +31,7 @@ syn region  vclString		start='"' end='"'
 syn region  vclString		start='{"' end='"}' contains=@htmlTop
 syn region  vclString		start='"""' end='"""' contains=@htmlTop
 " grep -E '^[a-z][*.0-9<>A-Z_a-z]+($|\s+``VCL)' doc/sphinx/reference/vcl_var.rst | cut -f1 | sort -u
-syn match   vclVariable		"\v<(bereq\.backend|bereq\.between_bytes_timeout|bereq\.body|bereq\.connect_timeout|bereq\.first_byte_timeout|bereq\.hash|bereq\.http\.[-0-9A-Z_a-z]+|bereq\.is_bgfetch|bereq\.is_hitmiss|bereq\.is_hitpass|bereq\.method|bereq\.proto|bereq\.retries|bereq\.time|bereq\.trace|bereq\.uncacheable|bereq\.url|bereq\.xid|bereq)" contained
+syn match   vclVariable		"\v<(bereq\.backend|bereq\.between_bytes_timeout|bereq\.body|bereq\.connect_timeout|bereq\.first_byte_timeout|bereq\.hash|bereq\.http\.[-0-9A-Z_a-z]+|bereq\.is_bgfetch|bereq\.is_hitmiss|bereq\.is_hitpass|bereq\.method|bereq\.proto|bereq\.retries|bereq\.task_deadline|bereq\.time|bereq\.trace|bereq\.uncacheable|bereq\.url|bereq\.xid|bereq)" contained
 syn match   vclVariable		"\v<(beresp\.age|beresp\.backend\.ip|beresp\.backend\.name|beresp\.backend\.port|beresp\.backend|beresp\.body|beresp\.do_esi|beresp\.do_gunzip|beresp\.do_gzip|beresp\.do_stream|beresp\.filters|beresp\.grace|beresp\.http\.[-0-9A-Z_a-z]+|beresp\.keep|beresp\.proto|beresp\.reason|beresp\.saintmode|beresp\.status|beresp\.storage|beresp\.storage_hint|beresp\.time|beresp\.transit_buffer|beresp\.ttl|beresp\.uncacheable|beresp\.was_304|beresp)>" contained
 syn match   vclVariable		"\v<(client\.identity|client\.ip)>" contained
 syn match   vclVariable		"\v<(local\.endpoint|local\.ip|local\.socket)>" contained
