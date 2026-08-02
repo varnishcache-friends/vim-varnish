@@ -1,8 +1,13 @@
+## Unreleased
+
+* Support current and legacy VCL symbols from Varnish and Vinyl Cache.
+* Add syntax-highlighting tests.
+
 ## 0.1.7 - 2024-02-11
 
 * Highlight C code inside C{..}C.
 * Highlight long strings in the rhs.
-* Change string Highlighting.
+* Change string highlighting.
 * Add bereq.task_deadline.
 
 ## 0.1.6 - 2023-05-25
@@ -36,9 +41,7 @@
 ## 0.1.0 - 2019-06-28
 
 * Add sess.timeout\_idle
-* Add all recent variables. Covers varnish 6.2.0.
-* Add all recent variables. This should cover everything up to
-  Varnish 6.1.0.
+* Add recent variables covering Varnish 6.2.0 and earlier.
 * Highlight vclConditional as Conditional (#3).
 * Add vcl keyword (#2).
 * Add {be}req.hash.

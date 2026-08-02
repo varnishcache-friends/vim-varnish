@@ -1,17 +1,22 @@
 # vim-varnish
 
-Vim and Neovim syntax highlighting support for Varnish Configuration
-Language (VCL).
+Vim and Neovim syntax highlighting support for the Varnish and Vinyl Cache
+Configuration Language (VCL).
 
 ## Installation
 
-### packer
+### lazy.nvim
 
-* `use 'varnishcache-friends/vim-varnish'`
+Add this plugin spec to your Neovim configuration:
 
-### Pathogen
+```lua
+return {
+  "varnishcache-friends/vim-varnish",
+  lazy = false,
+}
+```
 
-* `git clone --depth=1 https://github.com/varnishcache-friends/vim-varnish ~/.vim/bundle/vim-varnish`
+`lazy = false` keeps the filetype detection available at startup.
 
 ### vim-plug
 
@@ -28,11 +33,25 @@ line can be folded using the standard Vim and Neovim fold-commands.
 
 This option is off by default.
 
-```
+```vim
 " Default
 let g:vcl_fold = 0
 ```
 
+## Tests
+
+Run the syntax-highlighting tests with:
+
+```sh
+./test/run.sh
+```
+
+To run them with Neovim:
+
+```sh
+VIM_BIN=nvim ./test/run.sh
+```
+
 ## License
 
-This plugin is licensed under BSD license. See LICENSE for details.
+This plugin is licensed under BSD License. See LICENSE for details.
