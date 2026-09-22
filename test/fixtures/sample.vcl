@@ -23,12 +23,18 @@ probe p2 {
     .expect_close = false;  #t:ctx_probe_expect_close
 }
 
-sub vcl_init {
+sub vcl_init {  #t:sub_vcl_init
     new b = directors.round_robin();  #t:kw_new
     return (ok);  #t:ret_ok
 }
 
-sub vcl_recv {
+sub vcl_recv {  #t:sub_vcl_recv
+    call vcl_builtin_recv;  #t:sub_vcl_builtin_recv
+    call vcl_req_url;  #t:sub_vcl_req_url
+    call vcl_foo;  #t:sub_vcl_unknown
+    call vcl_fetch;  #t:sub_pre40_fetch
+    call vcl_error;  #t:sub_pre40_error
+    call vcl_log;  #t:sub_pre40_log
     if (req.url == "/x") {  #t:cond_if
         return (error(503, "boom"));  #t:ret_error
     } elseif (false) {  #t:cond_elseif

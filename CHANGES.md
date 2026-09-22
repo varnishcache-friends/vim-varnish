@@ -1,6 +1,7 @@
 ## Unreleased
 
 * Support current and legacy VCL symbols from Varnish and Vinyl Cache.
+* Highlight built-in VCL subroutine names.
 * Add syntax-highlighting tests.
 
 ## 0.1.7 - 2024-02-11

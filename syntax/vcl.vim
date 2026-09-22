@@ -1,7 +1,7 @@
 " vim syntax file
 " Language:	Varnish and Vinyl Cache Configuration Language
 " Maintainer:	Federico G. Schwindt <fgsch@lodoss.net>
-" Last Change:	2026 Aug 02
+" Last Change:	2026 Sep 22
 if version < 600
   syntax clear
 elseif exists("b:current_syntax")
@@ -26,6 +26,13 @@ syn region  vclString		start='"""' end='"""' contains=@htmlTop
 " Contextual grammar identifiers.
 syn keyword vclContext		as from glob none None default log fold pedantic table report
 syn match   vclContext		"\.\zs\(url\|request\|expected_response\|timeout\|interval\|window\|threshold\|initial\|expect_close\|host\|port\|path\|host_header\|connect_timeout\|first_byte_timeout\|between_bytes_timeout\|probe\|max_connections\|proxy_header\|preamble\|via\|authority\|wait_timeout\|wait_limit\)\>"
+" Built-in subroutine names from vcl_step.rst and bin/vinyld/builtin.vcl.
+syn keyword vclSubroutine	vcl_recv vcl_pipe vcl_pass vcl_hash vcl_purge vcl_hit vcl_miss vcl_deliver vcl_synth
+	\ vcl_backend_fetch vcl_backend_refresh vcl_backend_response vcl_backend_error vcl_init vcl_fini
+	\ vcl_builtin_recv vcl_builtin_pipe vcl_builtin_pass vcl_builtin_hash vcl_builtin_purge vcl_builtin_hit vcl_builtin_miss vcl_builtin_deliver vcl_builtin_synth
+	\ vcl_builtin_backend_fetch vcl_builtin_backend_refresh vcl_builtin_backend_response vcl_builtin_backend_error
+	\ vcl_req_host vcl_req_url vcl_req_method vcl_req_authorization vcl_req_cookie vcl_req_range vcl_refresh_valid vcl_refresh_conditions vcl_refresh_status
+	\ vcl_beresp_stale vcl_beresp_cookie vcl_beresp_control vcl_beresp_vary vcl_beresp_http10 vcl_beresp_range vcl_beresp_hitmiss
 
 " == Current ============================================================
 " Top-level keywords (only valid outside of blocks, hence not 'contained'
@@ -93,6 +100,7 @@ hi def link vclString		String
 hi def link vclReturn		Identifier
 hi def link vclVariable		Type
 hi def link vclConditional	Conditional
+hi def link vclSubroutine	Function
 hi def link vclContext		Identifier
 
 let b:current_syntax = "vcl"
