@@ -1,0 +1,36 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  syntax:
+    name: ${{ matrix.editor }} syntax tests
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - editor: Vim
+            package: vim
+            binary: vim
+          - editor: Neovim
+            package: neovim
+            binary: nvim
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Install ${{ matrix.editor }}
+        run: sudo apt-get update && sudo apt-get install --no-install-recommends --yes ${{ matrix.package }}
+
+      - name: Run syntax tests
+        env:
+          VIM_BIN: ${{ matrix.binary }}
+        run: ./test/run.sh
